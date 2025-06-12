@@ -48,3 +48,108 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+# ALl Notes
+
+## 1. Reset the project boiletplate
+
+`npm run reset-project`
+
+## 2. React Native Components
+
+Text = para, heading etc
+View = container
+
+`<Image />` => Display images either local or from web
+`<ScrollView />` => List of items user can scroll
+`<FlatList />` => Render list of items. Only render items visible on the screen. No scrolling
+`<TouchableOpacity />` => Toucable component. Button etc
+`<TextInput />` => Take in user input
+`<Button />` => Create a button to trigger an action when pushed
+`<Switch />` => Use a toggle value on and off
+
+![alt text](images18.png)
+
+## File based routing
+
+## Styling
+
+1. import stylesheet `import { StyleSheet } from "react-native";`
+
+2.
+
+```ts
+<View style={styles.container}>
+  <Text>Edit app/index.tsx to edit this screen.</Text>
+</View>;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
+```
+
+3.  Rename index to HomeScreen
+
+## Layout, Stack & Slot Components
+
+#### Root Layout
+
+- `_layout.jsx`
+
+#### `<Stack />`
+
+- Stack on top of another and will have back functionality
+
+#### `<Slot>`
+
+- Header is gone
+
+## Customize Page Header
+
+```ts
+<Stack
+  screenOptions={{
+    headerStyle: {
+      backgroundColor: "#ff8c00",
+    },
+    headerTintColor: "#fff",
+    headerTitleStyle: {
+      fontSize: 20,
+      fontWeight: "bold",
+    },
+    contentStyle: {
+      paddingHorizontal: 10,
+      paddingTop: 10,
+      backgroundColor: "#fff",
+    },
+  }}
+>
+  <Stack.Screen name="index" options={{ title: "Home" }} />
+</Stack>
+```
+
+## Home Screen
+
+- To show image import `Image`
+
+```ts
+import PostItImage from "@/assets/images/post-it.png";
+import { useRouter } from "expo-router";
+
+const router = useRouter();
+
+<View style={styles.container}>
+  <Image source={PostItImage} style={styles.image} />
+  <Text style={styles.title}>Welcome to Notes App</Text>
+  <Text style={styles.subtitle}>Capture your thoughts anythime, anywhere</Text>
+  <TouchableOpacity style={styles.button} onPress={() => router.push("/notes")}>
+    <Text style={styles.buttonText}>Get Started</Text>
+  </TouchableOpacity>
+</View>;
+```
+
+## Notes Layout & Screen
