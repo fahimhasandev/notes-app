@@ -153,3 +153,44 @@ const router = useRouter();
 ```
 
 ## Notes Layout & Screen
+1. create new folder `notes` --> create `_layout.jsx & index.jsx`
+
+```ts
+import { Stack } from "expo-router";
+
+const NoteLayout = () => {
+  return <Stack />;
+};
+
+export default NoteLayout;
+```
+
+
+```ts
+import { StyleSheet, Text, View } from "react-native";
+
+const NoteScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Text>Notes</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: "#fff",
+  },
+});
+
+export default NoteScreen;
+```
+
+## Display Notes In FlatList
+
+```ts
+
+
+```
