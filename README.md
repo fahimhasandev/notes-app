@@ -191,6 +191,24 @@ export default NoteScreen;
 ## Display Notes In FlatList
 
 ```ts
+const [notes, setNotes] = useState([
+    { id: 1, text: "Notes One" },
+    { id: 2, text: "Notes Two" },
+    { id: 3, text: "Notes Three" },
+    { id: 4, text: "Notes Four" },
+  ]);
 
+
+<View style={styles.container}>
+  <FlatList data={notes} keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+        <View style={styles.noteItem}>
+          <Text style={styles.noteText}>{item.text}</Text>
+        </View>)}
+      />
+  <TouchableOpacity style={styles.addButton}>
+    <Text style={styles.addButtonText}>+ Add Note</Text>
+  </TouchableOpacity>
+</View>
 
 ```
