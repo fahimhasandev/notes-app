@@ -31,7 +31,10 @@ const NoteScreen = () => {
           </View>
         )}
       />
-      <TouchableOpacity style={styles.addButton}>
+      <TouchableOpacity
+        style={styles.addButton}
+        onPress={() => setModelVisible(true)}
+      >
         <Text style={styles.addButtonText}>+ Add Note</Text>
       </TouchableOpacity>
 
