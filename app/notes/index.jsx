@@ -1,12 +1,12 @@
 import { useState } from "react";
 import {
   FlatList,
+  Modal,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-  Modal,
 } from "react-native";
 
 const NoteScreen = () => {
@@ -40,7 +40,9 @@ const NoteScreen = () => {
             <Text style={styles.noteText}>{item.text}</Text>
           </View>
         )}
-        ListEmptyComponent={<Text style={styles.noNotesText}>No notes yet</Text>}
+        ListEmptyComponent={
+          <Text style={styles.noNotesText}>No notes yet</Text>
+        }
       />
 
       <TouchableOpacity
@@ -83,6 +85,8 @@ const NoteScreen = () => {
     </View>
   );
 };
+
+export default NoteScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -175,4 +179,3 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
 });
-
