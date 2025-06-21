@@ -99,13 +99,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  noNotesText: {
-    textAlign: "center",
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#555",
-    marginTop: 15,
-  },
   modalOverlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.5)",

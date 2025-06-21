@@ -1,4 +1,4 @@
-import { FlatList, Text } from "react-native";
+import { FlatList, StyleSheet, Text } from "react-native";
 import NoteItem from "./NoteItem";
 
 function NoteList({ notes }) {
@@ -11,5 +11,15 @@ function NoteList({ notes }) {
     />
   );
 }
+
+const styles = StyleSheet.create({
+  noNotesText: {
+    textAlign: "center",
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#555",
+    marginTop: 15,
+  },
+});
 
 export default NoteList;
