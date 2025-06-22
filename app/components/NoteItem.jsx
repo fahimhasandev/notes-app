@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-const NoteItem = (note ) => {
+const NoteItem = ({ note }) => {
   return (
     <View style={styles.noteItem}>
       <Text style={styles.noteText}>{note.text}</Text>

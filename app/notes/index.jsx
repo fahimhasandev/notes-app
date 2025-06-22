@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import NoteItem from "../components/NoteItem";
+import NoteList from "../components/NoteList";
 
 const NoteScreen = () => {
   const [notes, setNotes] = useState([
@@ -33,7 +33,7 @@ const NoteScreen = () => {
   return (
     <View style={styles.container}>
       {/* Node List */}
-      <NoteItem notes={notes} />
+      <NoteList notes={notes} />
 
       <TouchableOpacity
         style={styles.addButton}
