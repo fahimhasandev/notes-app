@@ -1,10 +1,10 @@
-import { database } from "./appwrite";
+import { Databases } from "react-native-appwrite";
 
 const databaseService = {
   // List Documents
   async listDocuments(dbId, tableID) {
     try {
-      const response = await database.listDocuments(dbId, tableID);
+      const response = await Databases.listDocuments(dbId, tableID);
       return response.documents || [];
     } catch (error) {
       console.error("Error Fetchindf ocme", error.message);
