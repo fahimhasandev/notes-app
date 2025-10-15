@@ -1,7 +1,7 @@
+import AddNoteModal from "@/components/AddNoteModal";
+import NoteList from "@/components/NoteList";
 import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import AddNoteModal from "../components/AddNoteModal";
-import NoteList from "../components/NoteList";
 
 const NoteScreen = () => {
   const [notes, setNotes] = useState([
@@ -15,7 +15,7 @@ const NoteScreen = () => {
   const [newNote, setNewNote] = useState("");
 
   const addNote = () => {
-    if (newNote.trim() === "") return;
+    if (newNote.trim() === "") return; // if it is empty, it will return
     setNotes((prev) => [
       ...prev,
       { id: Date.now().toString(), text: newNote.trim() },
